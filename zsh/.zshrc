@@ -3914,12 +3914,12 @@ alias gitlog='git log --graph --oneline --all'
 #manzsh()  { /usr/bin/man zshall |  most +/"$1" ; }
 
 ## Switching shell safely and efficiently? http://www.zsh.org/mla/workers/2001/msg02410.html
-#bash() {
-#    NO_SWITCH="yes" command bash "$@"
-#}
-#restart () {
-#    exec $SHELL $SHELL_ARGS "$@"
-#}
+bash() {
+   NO_SWITCH="yes" command bash "$@"
+}
+restart () {
+   exec $SHELL $SHELL_ARGS "$@"
+}
 
 ## Handy functions for use with the (e::) globbing qualifier (like nt)
 #contains() { grep -q "$*" $REPLY }
