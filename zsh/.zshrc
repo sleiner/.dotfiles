@@ -4028,8 +4028,6 @@ zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host p
 #vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 if (( $+commands[cowsay] ))
     then
         if (( $+commands[fortune] ))
