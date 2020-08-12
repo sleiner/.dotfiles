@@ -3863,6 +3863,9 @@ zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host p
 ## translate
 #alias u='translate -i'
 
+## git
+alias gitlog='git log --graph --oneline --all'
+
 ## ignore ~/.ssh/known_hosts entries
 #alias insecssh='ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" -o "PreferredAuthentications=keyboard-interactive"'
 
