@@ -4031,6 +4031,12 @@ restart () {
 #vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
+####################################################################################################
+
+# Debian 11 puts fortune into the games folder...
+export PATH=${PATH}:/usr/games
+
+# Greetings banner
 if (( $+commands[cowsay] ))
     then
         if (( $+commands[fortune] ))
@@ -4042,6 +4048,7 @@ if (( $+commands[cowsay] ))
         echo
 fi
 
+# GPG agent
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
 if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
