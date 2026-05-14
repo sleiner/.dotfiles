@@ -10,6 +10,6 @@ if status is-interactive
     # key storage
     set -x GPG_TTY (tty)
     if command --query keychain
-        eval (keychain --eval --quiet)
+        eval (SHELL=fish keychain --eval --quiet)
     end
 end
